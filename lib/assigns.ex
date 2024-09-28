@@ -97,7 +97,7 @@ defmodule Assigns do
   end
 
   @doc false
-  @spec def_assign( :def | :defp, atom()) :: Macro.output()
+  @spec def_assign( :def | :defp, atom() | [ atom()]) :: Macro.output()
   defmacro def_assign( kind, name_or_names)
 
   defmacro def_assign( kind, name) when kind in [ :def, :defp] and is_atom( name) do
@@ -141,7 +141,7 @@ defmodule Assigns do
   end
 
   @doc false
-  @spec def_assign_new( :def | :defp, atom()) :: Macro.output()
+  @spec def_assign_new( :def | :defp, atom() | [ atom()]) :: Macro.output()
   defmacro def_assign_new( kind, name_or_names)
 
   defmacro def_assign_new( kind, name) when kind in [ :def, :defp] and is_atom( name) do
