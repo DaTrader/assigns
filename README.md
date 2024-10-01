@@ -13,13 +13,13 @@ def deps do
 end
 ```
 
-Import the `Assigns` module in every module where you use it:
+Use the `Assigns` module in every module where you need it:
 
 ```elixir
 defmodule MyAppWeb.MyLiveView do
   use MyAppWeb, :live_view
   
-  import Assigns # insert this here, or better yet into `MyAppWeb.html_helpers/0`
+  use Assigns # insert this here, or better yet into `MyAppWeb.html_helpers/0`
   
   # ..
 end
@@ -34,7 +34,7 @@ The docs can be found at [HexDocs](https://hexdocs.pm/assigns).
 ```elixir
 defmodule MyAppWeb.MyLiveView do
   use MyAppWeb, :live_view
-  import Assigns
+  use Assigns
   
   # ..
   
@@ -49,7 +49,7 @@ The snippet above is an equivalent of (expands into) the following:
 ```elixir
 defmodule MyAppWeb.MyLiveView do
   use MyAppWeb, :live_view
-  import Assigns
+  use Assigns
   
   # ..
 
