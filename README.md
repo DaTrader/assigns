@@ -8,7 +8,7 @@ function definitions.
 ```elixir
 def deps do
   [
-    { :assigns, "~> 0.1.0"}
+    { :assigns, "~> 0.2.0"}
   ]
 end
 ```
